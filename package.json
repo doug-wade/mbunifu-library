@@ -1,0 +1,38 @@
+{
+  "name": "@generator/library",
+  "description": "A small library for creating generators",
+  "version": "0.1.1",
+  "engines": {
+    "node": ">= 8.11.1"
+  },
+  "scripts": {
+    "generate": "NPM_LINKED=true npx ../generator-generator --clobber --name test-generator --debug",
+    "lint": "eslint index.js bin/*.js lib/*.js --cache --quiet",
+    "lint-fix": "eslint index.js bin/*.js lib/*.js --fix",
+    "lint-warn": "eslint index.js bin/*.js lib/*.js --cache",
+    "test": "jest"
+  },
+  "author": "Doug Wade <douglas.b.wade@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/doug-wade/generator-library"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.2.3",
+    "eslint": "^4.19.1",
+    "eslint-plugin-no-loops": "^0.3.0",
+    "eslint-plugin-react": "^7.7.0",
+    "inquirer": "^5.2.0",
+    "jest": "^22.4.3"
+  },
+  "dependencies": {
+    "change-case": "^3.0.2",
+    "fs-extra": "^5.0.0",
+    "mustache": "^2.3.0",
+    "walk": "^2.3.13",
+    "yargs": "11.0.0"
+  },
+  "main": "index.js",
+  "bin": "bin/index.js"
+}
