@@ -1,5 +1,5 @@
 {
-  "name": "@generator/library",
+  "name": "@mbunifu/library",
   "description": "A small library for creating generators",
   "version": "0.0.1",
   "engines": {
