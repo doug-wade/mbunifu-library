@@ -1,10 +1,10 @@
-# @generator/library
+# @mbunifu/library
 
 A set of tools for creating project generators in the `npx` age.  Scaffold new projects
 easily
 
 ```sh
-$ npx @generator/generator
+$ npx @mbunifu/generator
 ```
 
 With no global installations or local installations to clean up later.
@@ -12,10 +12,10 @@ With no global installations or local installations to clean up later.
 
 # Getting started
 
-The easiest way to get started is using `@generator/generator`
+The easiest way to get started is using `@mbunifu/generator`
 
 ```sh
-$ npx @generator/generator
+$ npx @mbunifu/generator
 ```
 
 The interactive wizard will walk you through setting up a new generator. Once you have a
@@ -31,7 +31,7 @@ This file is intended to be exposed in the [main](https://docs.npmjs.com/files/p
 field of your package.json
 
 ```js
-const { Generator } = require('@generator/library');
+const { Generator } = require('@mbunifu/library');
 
 class MyGenerator extends Generator {
   static prompts = {
@@ -51,7 +51,7 @@ field of your package.json as follows
 
 ```json
 {
-  "bin": "node_modules/@generator/library/bin/index.js"
+  "bin": "node_modules/@mbunifu/library/bin/index.js"
 }
 ```
 
@@ -68,7 +68,7 @@ The base class for generators.  To create a new generator, run makeApi with a cl
 that extends this Generator class as the generator argument.
 
 ```js
-const { Generator } = require('@generator/library');
+const { Generator } = require('@mbunifu/library');
 
 class GeneratorGenerator extends Generator {
   static name = 'my-generator'
@@ -115,7 +115,7 @@ $ npx my-generator --name="my-generated-project"
 
 ```js
 const getName = require('./get-name');
-const MyGenerator = require('@generator/my-generator');
+const MyGenerator = require('@mbunifu/my-generator');
 
 const myGenerator = new MyGenerator({ name: getName() });
 
@@ -192,7 +192,7 @@ options from interactive command line input.
 With the release of `npx`, the way that bin scripts are distributed and executed has changed. Global linking,
 crucial to developing with other frameworks, is no long possible. There is a new way to install and run
 command-line tools more conducive to scaffolding projects, but it requires a single module that can be
-downloading and executed by `npx`. `@generator/library` seeks to address this.
+downloading and executed by `npx`. `@mbunifu/library` seeks to address this.
 
 ## Why not yeoman?
 
